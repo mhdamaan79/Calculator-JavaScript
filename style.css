@@ -10,44 +10,51 @@
 body {
   width: 100vw;
   max-height: 100vw;
-  background-image: linear-gradient(to right top, #294fd6, #6154dc, #855ae1, #a561e5, #c168e9);
+/*   background-image: linear-gradient(to right top, #294fd6, #6154dc, #855ae1, #a561e5, #c168e9); */
+/*   background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
+background-image: linear-gradient(to right top, #a868ff, #ff3bb4, #ff6756, #ffb200, #a8eb12);
 }
 
 .a {
-  background-color: white;
+  background-color: #fff;
   box-shadow: 4px 4px 25px 5px  rgb(59, 56, 56);
   padding: 10px;
-  width: 80vw;
+  width: 350px;
   margin: 75px auto;
+  border-radius: 40px;
   
 }
 
 .main-container {
   display: grid;
+  /* display: inline-block; */
   width: 100%;
-  gap: 10px;
+  gap: 20px;
   grid-template-columns: repeat(4,1fr);
   justify-content: center;
+  padding: 10px;
 }
 
 .box {
   background-color: #fff;
-  padding: 25px;
+  padding: 20px;
   border-radius: 100px;
   text-align: center;
   font-weight: normal;
   cursor: pointer; 
+  transition-duration: 0.4s;
 }
 
 #box-1 {
   grid-column: 1 / -1;
-  background: black;
+  background: #051937;
   font-family: 'Space Mono', serif;
   color: white;
-  font-size: 2em;
+  font-size: 1.8em;
   border:0;
   padding: 1em;
   text-align: right;
+  right: 200px;
   width: 100%;
   height: 100px;
 }
@@ -56,8 +63,9 @@ body {
   grid-area: 6/1/7/3;
 }
 
-.box:hover {
-  background: #fff;
+.box:hover:not(input) {
+  background-color: rgba(255, 165, 0, 0.5);
+  transform: scale(1.1);
 }
 
 .box {
@@ -66,67 +74,4 @@ body {
 }
 .orange{
   background-color:orange;
-}
-
-
-/* responsive stye */
-
-
-@media only screen and (width<=412px) {
-  body {
-    background-image: linear-gradient(to right top, #769fdc, #9c98d9, #bd90cd, #d689b9, #e586a0);
-  }
-
-  .main-container {
-    display: grid;
-    width: 100%;
-    gap: 10px;
-  }
-
-  .box {
-    padding: 22px;
-    border-radius: 100px;
-  }
-  
-
-}
-
-@media only screen and (412px<width<=768px) {
-  .a {
-    background-color: white;
-    box-shadow: 4px 4px 25px 5px  rgb(59, 56, 56);
-    padding: 10px;
-    width: 60vw;
-    height: 80vh;
-  }
-
-  .main-container {
-    display: grid;
-    width: 100%;
-    height: 100%;
-    gap: 15px;
-    font-size: x-large;
-  }
-}
-
-@media only screen and (768px<width) {
-  body {
-    background-image: linear-gradient(to right top, #456696, #008fc1, #00b6bb, #00d781, #a8eb12);
-  }
-
-  .a {
-    background-color: white;
-    box-shadow: 4px 4px 25px 5px  rgb(59, 56, 56);
-    padding: 10px;
-    width: 55vw;
-    height: 90vh;
-  }
-
-  .main-container {
-    display: grid;
-    width: 100%;
-    height: 100%;
-    gap: 20px;
-    font-size:xx-large;
-  }
 }
