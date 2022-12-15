@@ -1,3 +1,3 @@
 # Calculator-Layout
 
-Calculator Layout with HTML & CSS (Grid). Image preview is added for reference.
+Calculator using HTML, CSS (Grid) & JavaScript. Image preview is added for reference.
